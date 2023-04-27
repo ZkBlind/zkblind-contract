@@ -1,0 +1,40 @@
+{
+  "name": "zkblind-contract",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
+    "@nomiclabs/hardhat-ethers": "^2.1.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "dotenv-cli": "^6.0.0",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.7.0",
+    "hardhat": "^2.12.2",
+    "hardhat-deploy": "^0.11.4"
+  },
+  "dependencies": {
+    "@ethersproject/basex": "^5.7.0",
+    "@ethersproject/contracts": "^5.7.0",
+    "@ethersproject/hdnode": "^5.7.0",
+    "@ethersproject/json-wallets": "^5.7.0",
+    "@ethersproject/pbkdf2": "^5.7.0",
+    "@ethersproject/providers": "^5.7.0",
+    "@ethersproject/random": "^5.7.0",
+    "@ethersproject/sha2": "^5.7.0",
+    "@ethersproject/solidity": "^5.7.0",
+    "@ethersproject/wallet": "^5.7.0",
+    "@ethersproject/wordlists": "^5.7.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.6",
+    "@openzeppelin/contracts": "^4.7.0",
+    "@openzeppelin/contracts-upgradeable": "^4.7.0",
+    "@openzeppelin/hardhat-upgrades": "^1.20",
+    "aes-js": "^3.1.2",
+    "ethereum-waffle": "^3.4.4",
+    "ethereumjs-util": "^7.1.5",
+    "hardhat-contract-sizer": "^2.6.1",
+    "hardhat-deploy": "^0.11.4",
+    "nofilter": "^3.1.0",
+    "retry": "^0.13.1",
+    "signal-exit": "^3.0.7"
+  }
+}
