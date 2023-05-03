@@ -6,13 +6,13 @@ module.exports = async ({
   const {deploy, execute, get} = deployments;
   const {deployer} = await getNamedAccounts();
 
-  let MockVerifierAddr = (await get("MockVerifier")).address;
+  let VerifierAddr = (await get("Verifier")).address;
   await deploy("Whitelist", {
     from: deployer,
     log: true,
     contract: "Whitelist",
     args: [
-      MockVerifierAddr
+      VerifierAddr
     ],
     skipIfAlreadyDeployed: true,
   });

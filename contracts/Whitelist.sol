@@ -5,8 +5,10 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 interface IVerifier {
     function verifyProof(
-        bytes memory _proof,
-        uint256[3] memory _input
+        uint[2] memory a,
+        uint[2][2] memory b,
+        uint[2] memory c,
+        uint[17] memory input
     ) external returns (bool);
 }
 
@@ -28,19 +30,15 @@ contract Whitelist is Ownable {
     }
 
     function addToWhitelist(
-        bytes calldata _proof,
         uint256 _userId,
-        bytes32 _emailSuffix
+        bytes32 _emailSuffix,
+        uint[2] memory a,
+        uint[2][2] memory b,
+        uint[2] memory c,
+        uint[17] memory input
     ) public {
         require(
-            verifier.verifyProof(
-                _proof,
-                [
-                    _userId,
-                    uint256(_emailSuffix),
-                    uint256(uint160(msg.sender))
-                ]
-            ),
+            verifier.verifyProof(a,b,c,input),
             "Invalid proof"
         );
         WhitelistData memory newWhitelistData = WhitelistData({
