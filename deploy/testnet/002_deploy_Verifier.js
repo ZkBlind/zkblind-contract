@@ -1,10 +1,7 @@
 const { ethers, upgrades } = require("hardhat");
-module.exports = async ({
-  getNamedAccounts,
-  deployments
-}) => {
-  const {deploy, execute, get} = deployments;
-  const {deployer} = await getNamedAccounts();
+module.exports = async ({ getNamedAccounts, deployments }) => {
+  const { deploy, execute, get } = deployments;
+  const { deployer } = await getNamedAccounts();
 
   await deploy("Verifier", {
     from: deployer,
@@ -14,4 +11,3 @@ module.exports = async ({
     skipIfAlreadyDeployed: true,
   });
 };
-
